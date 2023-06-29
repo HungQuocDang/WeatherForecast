@@ -1,5 +1,3 @@
-
-//var broadcastingEl=document.getElementById("broadcasting");
 var cityName = 0;
 var temperature1 = 0;
 var weather = 0;
@@ -7,9 +5,7 @@ var windSpeed = 0;
 let selectedCity;
 
 function doSearchCity() {
-  //debugger;
   var x = document.getElementById("myText").value;
-  //document.getElementById("demo").innerHTML = x;
   selectedCity = x;
   console.log("selectedCity: ", selectedCity);
 
@@ -99,21 +95,13 @@ function CanadianWeather() {
             matrixAllDays.push(matrixWeather[m].weatherIconN);
           }
           iconDay0 = matrixAllDays[5];
-          //console.log("iconDay0",iconDay0);
-          //console.log(" matrixWeather", matrixWeather);
-          // console.log("matrixAllDays", matrixAllDays);
-          /////////////////////////////
-
-          ////////////////////////////    
+       
           let mainA=document.getElementById("mainA");
           mainA.innerHTML="";
           var printCity = document.createElement("h1");   // print out city
           printCity.innerHTML = selectedCity;
           mainA.appendChild(printCity);
-          ///////////////////////////
-
-
-          /////////////////////////////
+          
           let list0El=document.getElementById("list0");
           let list1El=document.getElementById("list1");
           let list2El=document.getElementById("list2");
@@ -212,7 +200,3 @@ function CanadianWeather() {
         });
     })
 }
-
-
-//broadcastingEl.addEventListener("click", CanadianWeather);
-//document.getElementById("broadcasting").addEventListener("click", CanadianWeather);
